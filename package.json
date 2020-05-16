@@ -1,0 +1,22 @@
+{
+  "name": "ragemp-cnr",
+  "version": "1.0.0",
+  "description": "Cops 'n' Robbers script for RAGE Multiplayer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjames96/ragemp-cnr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjames96/ragemp-cnr/issues"
+  },
+  "homepage": "https://github.com/jjames96/ragemp-cnr#readme",
+  "devDependencies": {
+    "typescript": "^3.9.2"
+  }
+}

@@ -4,7 +4,8 @@
   "description": "Cops 'n' Robbers script for RAGE Multiplayer",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-server": "cd src/server && rollup -c",
+    "watch-server": "cd src/server && rollup -cw"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,11 @@
   },
   "homepage": "https://github.com/jjames96/ragemp-cnr#readme",
   "devDependencies": {
+    "@types/ragemp-c": "github:CocaColaBear/types-ragemp-c#master",
+    "@types/ragemp-s": "github:CocaColaBear/types-ragemp-s#master",
+    "rollup": "^2.10.2",
+    "rollup-plugin-typescript2": "^0.27.1",
     "typescript": "^3.9.2"
-  }
+  },
+  "dependencies": {}
 }

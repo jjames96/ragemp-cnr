@@ -5,6 +5,7 @@ maps/
 node_modules/
 packages/
 plugins/
+dist/
 
 *.dll
 conf.json

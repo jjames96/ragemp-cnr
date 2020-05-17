@@ -26,19 +26,23 @@
       <b-tab-item label="Register" icon="fas fa-user-plus">
 
         <b-field label="Username" label-position="on-border">
-          <b-input type="text" icon="fas fa-user-circle"></b-input>
+          <b-input type="text" icon="fas fa-user-circle" required maxlength="24"></b-input>
         </b-field>
 
-        <b-field label="Email" label-position="on-border">
+        <b-field
+          label="Email (optional)"
+          label-position="on-border"
+          message="Your email is not required but will be used to reset your password if you forget it"
+        >
           <b-input type="email" icon="fas fa-at"></b-input>
         </b-field>
 
         <b-field label="Password" label-position="on-border">
-          <b-input type="password" icon="fas fa-unlock-alt"></b-input>
+          <b-input type="password" icon="fas fa-unlock-alt" required minlength="3"></b-input>
         </b-field>
 
         <b-field label="Confirm password" label-position="on-border">
-          <b-input type="password" icon="fas fa-unlock-alt"></b-input>
+          <b-input type="password" icon="fas fa-unlock-alt" required></b-input>
         </b-field>
 
         <b-button type="is-primary" expanded>Register</b-button>

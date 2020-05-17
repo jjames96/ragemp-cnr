@@ -6,7 +6,8 @@
   "scripts": {
     "build-server": "cd src/server && rollup -c",
     "watch-server": "cd src/server && rollup -cw",
-    "build-cef": "cd src/cef && vue-cli-service build",
+    "prebuild-cef": "rm -rf client_packages/cnr/cef && mkdirp client_packages/cnr/cef",
+    "build-cef": "cd src/cef && vue-cli-service build && mv ./dist/* ../../client_packages/cnr/cef",
     "watch-cef": "cd src/cef && vue-cli-service serve",
     "lint-cef": "cd src/cef && vue-cli-service lint"
   },
@@ -25,10 +26,12 @@
     "@types/ragemp-s": "github:CocaColaBear/types-ragemp-s#master",
     "@vue/cli-plugin-babel": "^4.3.1",
     "@vue/cli-plugin-eslint": "^4.3.1",
+    "@vue/cli-plugin-router": "^4.3.1",
     "@vue/cli-service": "^4.3.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.0.0",
     "eslint-plugin-vue": "^6.2.2",
+    "mkdirp": "^1.0.4",
     "node-sass": "^4.14.1",
     "rollup": "^2.10.2",
     "rollup-plugin-typescript2": "^0.27.1",
@@ -38,6 +41,7 @@
   },
   "dependencies": {
     "buefy": "^0.8.18",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.6"
   }
 }

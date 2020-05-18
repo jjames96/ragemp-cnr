@@ -4,6 +4,8 @@
   "description": "Cops 'n' Robbers script for RAGE Multiplayer",
   "main": "index.js",
   "scripts": {
+    "build-client": "cd src/client && rollup -c",
+    "watch-client": "cd src/client && rollup -cw",
     "build-server": "cd src/server && rollup -c",
     "watch-server": "cd src/server && rollup -cw",
     "prebuild-cef": "rm -rf client_packages/cnr/cef && mkdirp client_packages/cnr/cef",

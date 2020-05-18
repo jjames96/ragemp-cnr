@@ -1,5 +1,5 @@
 <template>
-  <div class="column is-half">
+  <div class="column">
     <b-tabs type="is-boxed is-centered">
       <b-tab-item label="Log In" icon="fas fa-user-check">
 
@@ -57,3 +57,10 @@ export default {
   name: 'LoginRegister'
 }
 </script>
+
+<style>
+body {
+  width: 600px;
+  height: auto;
+}
+</style>

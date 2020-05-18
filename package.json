@@ -4,6 +4,7 @@
   "description": "Cops 'n' Robbers script for RAGE Multiplayer",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build-client && npm run build-server && npm run build-cef",
     "build-client": "cd src/client && rollup -c",
     "watch-client": "cd src/client && rollup -cw",
     "build-server": "cd src/server && rollup -c",

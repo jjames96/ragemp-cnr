@@ -2,7 +2,7 @@
     "compilerOptions": {
         "noImplicitAny": true,
         "target": "ES6",
-        "types": ["ragemp-s"],
+        "types": ["ragemp-s", "node"],
         "baseUrl": "../../",
         "paths": {
             "*": ["node_modules/*"]

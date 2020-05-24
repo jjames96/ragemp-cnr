@@ -1,3 +1,4 @@
+import dotenv from 'rollup-plugin-dotenv';
 import typescript from 'rollup-plugin-typescript2';
 import pkg from '../../package.json';
 
@@ -14,6 +15,9 @@ export default {
         ...Object.keys(pkg.peerDependencies || {})
     ],
     plugins: [
+        dotenv({
+            dotenv: require('dotenv')
+        }),
         typescript({
             typescript: require('typescript')
         })

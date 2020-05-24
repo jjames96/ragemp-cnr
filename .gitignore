@@ -11,3 +11,4 @@ dist/
 conf.json
 *.tar.gz
 *.exe
+.env

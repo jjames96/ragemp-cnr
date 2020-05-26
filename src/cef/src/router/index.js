@@ -4,13 +4,11 @@ import LoginRegister from '../components/LoginRegister.vue'
 
 Vue.use(VueRouter)
 
-  const routes = [
-  {
-    path: '/auth',
-    name: 'LoginRegister',
-    component: LoginRegister
-  }
-]
+const routes = [{
+  path: '/auth',
+  name: 'LoginRegister',
+  component: LoginRegister
+}]
 
 const router = new VueRouter({
   routes

@@ -10,7 +10,23 @@ Vue.use(Buefy, {
 
 Vue.config.productionTip = false
 
-new Vue({
+window.vm = {}
+
+vm = new Vue({
   router,
-  render: h => h(App)
+  render: h => h(App),
+  methods: {
+    showError: function(error) {
+      this.$buefy.dialog.alert({
+        title: 'Error',
+        message: error,
+        type: 'is-danger',
+        hasIcon: true,
+        icon: 'times-circle',
+        iconPack: 'fa',
+        ariaRole: 'alertdialog',
+        ariaModal: true
+      })
+    }
+  }
 }).$mount('#app')

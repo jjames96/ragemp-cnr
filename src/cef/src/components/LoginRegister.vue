@@ -81,22 +81,22 @@ function registerButtonClicked() {
 
   let isValid = true;
 
-  if (!isRegisterUsernameValid(usernameElement.val())) {
+  if (!isRegisterUsernameValid(username)) {
     usernameElement[0].setCustomValidity(`Username is not valid - must be at least ${USERNAME_MIN_CHARACTERS} characters in length`);
     isValid = false;
   }
 
-  if (!isRegisterEmailValid(emailElement.val())) {
+  if (!isRegisterEmailValid(email)) {
     emailElement[0].setCustomValidity("Email is not valid");
     isValid = false;
   } 
 
-  if (!isRegisterPasswordValid(passwordElement.val())) {
+  if (!isRegisterPasswordValid(password)) {
     passwordElement[0].setCustomValidity(`Password is not valid - must be at least ${PASSWORD_MIN_CHARACTERS} characters in length`);
     isValid = false;
   }
 
-  if (!isRegisterConfirmPasswordValid(passwordElement.val(), confirmPasswordElement.val())) {
+  if (!isRegisterConfirmPasswordValid(password, confirmPassword)) {
     confirmPasswordElement[0].setCustomValidity("Passwords do not match");
     isValid = false;
   }

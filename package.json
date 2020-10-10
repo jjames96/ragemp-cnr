@@ -1,0 +1,61 @@
+{
+  "name": "ragemp-cnr",
+  "version": "1.0.0",
+  "description": "Cops 'n' Robbers script for RAGE Multiplayer",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build-client && npm run build-server && npm run build-cef",
+    "build-client": "cd src/client && rollup -c",
+    "watch-client": "cd src/client && rollup -cw",
+    "build-server": "cd src/server && rollup -c",
+    "watch-server": "cd src/server && rollup -cw",
+    "prebuild-cef": "rm -rf client_packages/cnr/cef && mkdirp client_packages/cnr/cef",
+    "build-cef": "cd src/cef && vue-cli-service build && mv ./dist/* ../../client_packages/cnr/cef",
+    "watch-cef": "cd src/cef && vue-cli-service serve",
+    "lint-cef": "cd src/cef && vue-cli-service lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjames96/ragemp-cnr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjames96/ragemp-cnr/issues"
+  },
+  "homepage": "https://github.com/jjames96/ragemp-cnr#readme",
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/lodash": "^4.14.151",
+    "@types/mysql": "^2.15.12",
+    "@types/node": "^14.0.5",
+    "@types/ragemp-c": "github:CocaColaBear/types-ragemp-c#master",
+    "@types/ragemp-s": "github:CocaColaBear/types-ragemp-s#master",
+    "@types/uuid": "^8.0.0",
+    "@vue/cli-plugin-babel": "^4.3.1",
+    "@vue/cli-plugin-eslint": "^4.3.1",
+    "@vue/cli-plugin-router": "^4.3.1",
+    "@vue/cli-service": "^4.3.1",
+    "babel-eslint": "^10.1.0",
+    "bcrypt": "^4.0.1",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "jquery": "^3.5.1",
+    "lodash": "^4.17.15",
+    "mkdirp": "^1.0.4",
+    "mysql": "^2.18.1",
+    "node-sass": "^4.14.1",
+    "rollup": "^2.10.2",
+    "rollup-plugin-dotenv": "^0.3.0",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "sass-loader": "^8.0.2",
+    "typescript": "^3.9.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "dependencies": {
+    "buefy": "^0.8.18",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.6"
+  }
+}

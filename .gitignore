@@ -1,0 +1,14 @@
+bin/
+client_packages/
+dotnet/
+maps/
+node_modules/
+packages/
+plugins/
+dist/
+
+*.dll
+conf.json
+*.tar.gz
+*.exe
+.env
